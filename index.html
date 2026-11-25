@@ -73,8 +73,19 @@
   .btn-mustard{background:var(--mustard);color:#241a05;}
   .btn-line{background:transparent;color:#fff7e8;border-color:#fff7e8;}
   .btn svg{width:19px;height:19px;flex:none;}
-  .strip{background:var(--mustard);color:#2a1d05;font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.82rem;padding:13px 14px;}
-  .strip span{margin:0 8px;}
+  .hero-proof{max-width:640px;margin:18px auto 0;background:rgba(15,10,6,.62);border:1px solid rgba(233,163,25,.55);border-radius:10px;padding:14px 16px;}
+  .hero-proof a.stars{color:#ffd98a;font-weight:800;text-decoration:none;font-size:1.02rem;letter-spacing:.02em;}
+  .hero-proof a.stars:hover,.hero-proof a.stars:focus{text-decoration:underline;}
+  .hero-proof blockquote{margin:10px 0 0;font-size:.98rem;line-height:1.5;color:#fff7e8;font-style:italic;}
+  .hero-proof cite{display:block;margin-top:6px;font-style:normal;font-weight:700;color:#f3e3c2;font-size:.88rem;}
+  .menu-source{color:#ffd98a;font-weight:700;margin-top:8px;font-size:.98rem;}
+  .menu-box li .price{color:var(--mustard);font-weight:800;white-space:nowrap;margin-left:6px;}
+  .sticky-order{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:75;background:var(--flame);color:#fff;font-weight:800;text-decoration:none;padding:14px 26px;border-radius:99px;box-shadow:0 10px 26px rgba(0,0,0,.35);letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;display:inline-flex;align-items:center;justify-content:center;min-height:52px;white-space:nowrap;border:2px solid rgba(255,255,255,.25);}
+  @media (prefers-color-scheme: dark){.sticky-order{background:#b34a17;}}
+  .strip-wrap{background:var(--paper);padding:24px 18px 2px;}
+  .strip{max-width:760px;margin:0 auto;background:var(--mustard);color:#2a1d05;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;line-height:1.7;padding:14px 20px;border-radius:10px;text-align:center;}
+  .strip span{white-space:nowrap;}
+  .strip .sep{margin:0 8px;white-space:nowrap;}
   .sec{padding:58px 0;}
   .sec-alt{background:var(--paper2);}
   .sec-dark{background:var(--coal);color:#f8ecd7;}
@@ -161,8 +172,14 @@
     .brandline{font-size:1.22rem;letter-spacing:.03em;}
     .brandline small{letter-spacing:.16em;font-size:.56rem;}
     nav.main a{padding:8px 8px;font-size:.8rem;}
-    .strip{font-size:.72rem;letter-spacing:.1em;}
+    .strip-wrap{padding:18px 14px 0;}
+    .strip{font-size:.74rem;letter-spacing:.09em;line-height:1.8;padding:12px 14px;}
+    .strip .sep{margin:0 5px;}
     .gallery img{height:140px;}
+    .hero .cta-row .btn:not(.btn-order){display:none;}
+    .hero .cta-row{margin-top:18px;}
+    .sticky-order{left:12px;transform:none;width:calc(100% - 92px);bottom:12px;padding:14px 16px;font-size:.88rem;}
+    .to-top{bottom:12px;}
   }
 </style>
 </head>
@@ -179,6 +196,7 @@
       <a href="#gallery">Gallery</a>
       <a href="#visit">Visit</a>
       <a class="call" href="tel:+17042477213">Call Now</a>
+      <a href="sms:+17042477213">Text</a>
     </nav>
   </div>
 </header>
@@ -199,13 +217,20 @@
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
           Call (704) 247-7213
         </a>
-        <a class="btn btn-mustard" href="https://www.doordash.com/search/store/Rudy%27s%20Soulfood/" target="_blank" rel="noopener">Order on DoorDash</a>
+        <a class="btn btn-mustard" href="sms:+17042477213">Text</a>
+        <a class="btn btn-mustard btn-order" href="https://www.doordash.com/sdl/store/Rudys-Soul-Food-Catering-Charlotte-46004909/" target="_blank" rel="noopener">Order on DoorDash</a>
         <a class="btn btn-line" href="#menu">See the Menu</a>
+      </div>
+      <div class="hero-proof">
+        <a class="stars" href="https://www.doordash.com/sdl/store/Rudys-Soul-Food-Catering-Charlotte-46004909/" target="_blank" rel="noopener">&#9733; 4.5 &#183; 200+ DoorDash ratings</a>
+        <blockquote>&ldquo;The food was really good and great portions for the price! The Hamburger Steak Plate with yams and greens was too good. 10/10 I&rsquo;ll definitely be ordering again!&rdquo;<cite>&mdash; Krystal H, DoorDash, Oct 2026</cite></blockquote>
       </div>
     </div>
   </section>
 
-  <div class="strip" aria-hidden="true"><span>Made From Scratch</span>&#8226;<span>Made With Love</span>&#8226;<span>Open 7 Days</span>&#8226;<span>Charlotte, NC</span></div>
+  <div class="strip-wrap">
+    <div class="strip"><span>Made From Scratch</span><span class="sep" aria-hidden="true">&#8226;</span><span>Made With Love</span><span class="sep" aria-hidden="true">&#8226;</span><span>Open 7 Days</span><span class="sep" aria-hidden="true">&#8226;</span><span>Charlotte, NC</span></div>
+  </div>
 
   <section class="sec" id="story">
     <div class="wrap">
@@ -260,16 +285,17 @@
     <div class="wrap">
       <span class="label">The Full Menu</span>
       <h2 class="sec-title">Plates, Dinners, Sides</h2>
+      <p class="menu-source">Prices as listed on DoorDash.</p>
       <p class="sec-sub">Everything on the menu, made from scratch. Call ahead or order on DoorDash.</p>
       <div class="menu-cols">
         <div class="menu-box">
           <h3>Plates and Dinners</h3>
           <ul>
-            <li>Meatloaf Plate</li>
-            <li>Hamburger Steak Plate</li>
-            <li>Honey Garlic Salmon Plate</li>
-            <li>Fried Pork Chop Plate</li>
-            <li>Baked Honey Garlic Wing Dinner</li>
+            <li>Meatloaf Plate <span class="price">$24.20</span></li>
+            <li>Hamburger Steak Plate <span class="price">$24.20</span></li>
+            <li>Honey Garlic Salmon Plate <span class="price">$35.20</span></li>
+            <li>Fried Pork Chop Plate <span class="price">$24.20</span></li>
+            <li>Baked Honey Garlic Wing Dinner <span class="price">$22.00</span></li>
             <li>Rudy's Baked Smothered Turkey Wings Dinner</li>
             <li>Rudy's Hamburger Steak w Gravy Dinner</li>
             <li>Rudy's 6pc Fried Wing Dinner</li>
@@ -280,13 +306,13 @@
         <div class="menu-box">
           <h3>Sides and Dessert</h3>
           <ul>
-            <li>Rudy's Garlic Mashed Potatoes</li>
-            <li>Rudy's Green Beans</li>
-            <li>Yellow Rice</li>
-            <li>Rudy's Candied Yams</li>
-            <li>Rudy's 5 Cheese Mac &amp; Cheese</li>
-            <li>Rudy's Smoked Collard Greens</li>
-            <li>Banana Pudding</li>
+            <li>Rudy's Garlic Mashed Potatoes <span class="price">$4.95</span></li>
+            <li>Rudy's Green Beans <span class="price">$4.95</span></li>
+            <li>Yellow Rice <span class="price">$4.95</span></li>
+            <li>Rudy's Candied Yams <span class="price">$4.95</span></li>
+            <li>Rudy's 5 Cheese Mac &amp; Cheese <span class="price">$4.95</span></li>
+            <li>Rudy's Smoked Collard Greens <span class="price">$4.95</span></li>
+            <li>Banana Pudding <span class="price">$7.70</span></li>
           </ul>
         </div>
       </div>
@@ -349,7 +375,7 @@
         <p>Call us at (704) 247-7213, order on DoorDash, or follow us on Instagram at @rudys_soulfood.</p>
         <div class="cta-row">
           <a class="btn btn-mustard" href="tel:+17042477213">Call (704) 247-7213</a>
-          <a class="btn btn-mustard" href="https://www.doordash.com/search/store/Rudy%27s%20Soulfood/" target="_blank" rel="noopener">Order on DoorDash</a>
+          <a class="btn btn-mustard" href="https://www.doordash.com/sdl/store/Rudys-Soul-Food-Catering-Charlotte-46004909/" target="_blank" rel="noopener">Order on DoorDash</a>
           <a class="btn btn-line" href="https://www.instagram.com/rudys_soulfood/" target="_blank" rel="noopener">Follow @rudys_soulfood</a>
         </div>
       </div>
@@ -364,10 +390,12 @@
   <div class="foot-links">
     <a href="https://www.instagram.com/rudys_soulfood/" target="_blank" rel="noopener">Instagram @rudys_soulfood</a>
     <a href="https://www.google.com/maps/search/?api=1&amp;query=9545+Pinnacle+Drive+Charlotte+NC+28262" target="_blank" rel="noopener">Directions</a>
-    <a href="https://www.doordash.com/search/store/Rudy%27s%20Soulfood/" target="_blank" rel="noopener">DoorDash</a>
+    <a href="https://www.doordash.com/sdl/store/Rudys-Soul-Food-Catering-Charlotte-46004909/" target="_blank" rel="noopener">DoorDash</a>
   </div>
   <p style="margin-top:18px;">Come Hungry. Leave Happy.</p>
 </footer>
+
+<a class="sticky-order" href="https://www.doordash.com/sdl/store/Rudys-Soul-Food-Catering-Charlotte-46004909/" target="_blank" rel="noopener">Order on DoorDash</a>
 
 <a class="to-top" href="#top" aria-label="Back to top">&#8593;</a>
 
